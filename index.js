@@ -7,8 +7,7 @@ const hu = { 'Content-Type': 'text/html; charset=utf-8' };
 const app = x();
 Router
   .route('/')
-  .get(r => r.res.end('Привет мир!'))
-;
+  .get(r => r.res.end('Привет мир!'));
 app
   .use((r, rs, n) => rs.status(200).set(hu) && n())
   .use(x.static('.'))
@@ -16,8 +15,6 @@ app
   .use(({ res: r }) => r.status(404).end('Пока нет!'))
   .use((e, r, rs, n) => rs.status(500).end(`Ошибка: ${e}`))
   /* .set('view engine', 'pug') */
-  .set('x-powered-by', false)
-;
-h1(app)
-  .listen(process.env.PORT || PORT, () => log(process.pid))
-;
+  .set('x-powered-by', false);
+const s = h1(app);
+s.listen(process.env.PORT || PORT, () => log(process.pid));
