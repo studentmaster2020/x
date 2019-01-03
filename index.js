@@ -17,7 +17,8 @@ app
   .use((e, r, rs, n) => rs.status(500).end(`Ошибка: ${e}`))
   /* .set('view engine', 'pug') */
   .set('x-powered-by', false);
-const s = h1(app).listen(process.env.PORT || PORT, () => log(process.pid));
+const s = h1(app)
+.listen(process.env.PORT || PORT, () => log(process.pid));
 
 const ws = socketIO(s);
 const cb = d => log(d);
