@@ -5,6 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/GossJS/x.git",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
   }
 }
