@@ -16,5 +16,5 @@ app
   .use((e, r, rs, n) => rs.status(500).end(`Ошибка: ${e}`))
   /* .set('view engine', 'pug') */
   .set('x-powered-by', false);
-const s = h1(app)
+module.exports = h1(app)
   .listen(process.env.PORT || PORT, () => log(process.pid));
