@@ -17,3 +17,5 @@ https://raw.githubusercontent.com/GossJS/x/master/index.js
 * `bash <(curl -s https://kodaktor.ru/g/eslint_exec)`
 * запустить node в папке с этим файлом и сделать .load index.js
 * использовать именованные функции в обработчиках – так будет информативнее выглядеть стек
+
+https://kodaktor.ru/j/x2 – чуть больше добавок: шутдаун и пост
