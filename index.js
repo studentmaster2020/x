@@ -12,8 +12,8 @@ app
   .use((r, rs, n) => rs.status(200).set(hu) && n())
   .use(x.static('.'))
   .use('/', Router)
-  .use(({ res: r }) => r.status(404).end('Пока нет!'))
-  .use((e, r, rs, n) => rs.status(500).end(`Ошибка: ${e}`))
+  .use(({ res: r }) => r.status(404).set(hu).send('Пока нет!'))
+  .use((e, r, rs, n) => rs.status(500).set(hu).send(`Ошибка: ${e}`))
   /* .set('view engine', 'pug') */
   .set('x-powered-by', false);
 module.exports = h1(app)
