@@ -18,3 +18,17 @@ app
   .set('x-powered-by', false);
 module.exports = h1(app)
   .listen(process.env.PORT || PORT, () => log(process.pid));
+
+
+/*
+
+для варианта с type="module"
+
+import { Server } from 'http';
+import x from 'express';
+
+и в предпоследней строке
+
+export default Server(app)
+
+*/
