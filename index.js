@@ -7,7 +7,7 @@ const hu = { 'Content-Type': 'text/html; charset=utf-8' };
 const app = x();
 Router
   .route('/')
-  .get(r => r.res.end('Привет мир!'));
+  .get(r => r.res.end('Привет открытому образованию!'));
 app
   .use((r, rs, n) => rs.status(200).set(hu) && n())
   .use(x.static('.'))
